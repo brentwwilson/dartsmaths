@@ -24,9 +24,6 @@
 <!--Darts Throw Form Start-->
                 <form id="DartsThrow">
                     <fieldset id="fieldsetdartsthrow">
-                        <div class="form-row  align-items-center justify-content-center bottomButton">
-                            <button type="button" class="btn btn-dark" name="dartcalc" value = "Submit" id="submitFormData" onclick="dartOneNumber();">Throw</button>
-                        </div>
                         <div class="form-row">
                             <div class="form-group col">
                                 <label for="dartone">Dart One</label>
@@ -59,14 +56,15 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col">
-                                <label for="darttotal">Total</label>
+                                <label for="darttotal">Round</label>
                                 <input type="number" name="darttotal" id="darttotal" class="form-control" placeholder="" disabled>
                             </div>
                             <div class="form-group col">
-                                <label for="scoretotal">Total</label>
-                                <input type="number" name="scoretotal" id="scoretotal" class="form-control" placeholder="501" disabled>
+                                <label for="scoretotal">Score</label>
+                                <input type="number" name="scoretotal" id="scoretotal" class="form-control" value="501" disabled>
                             </div>
                         </div>
+                        <!--
                         <div class="form-row">
                             <div class="form-group col">
                                 <label for="total">Throw</label>
@@ -77,11 +75,17 @@
                                 <input type="number" name="score" id="score" class="form-control" placeholder="501">
                             </div>
                         </div>
-                        <div class="form-row  align-items-center justify-content-center bottomButton">
-                            <button type="button" class="btn btn-dark" name="Check" value = "Submit" id="submitFormData" onclick="checkGuess();">Check</button>
-                        </div>
-                        <div class="form-row  align-items-center justify-content-center bottomButton">
-                            <button type="button" class="btn btn-dark" name="Reset" value = "Submit" id="submitFormData" onclick="resetGame();">Reset</button>
+                        -->
+                        <div class="form-row">
+                            <div class="form-group col  align-items-center justify-content-center bottomButton">
+                                <button type="button" class="btn btn-dark" name="dartcalc" value = "Submit" id="submitFormData" onclick="dartOneNumber();">Throw</button>
+                            </div>
+                            <div class="form-group col  align-items-center justify-content-center bottomButton">
+                                <button type="button" class="btn btn-dark" name="Check" value = "Submit" id="submitFormData" onclick="checkGuess();">Round</button>
+                            </div>
+                            <div class="form-group col  align-items-center justify-content-center bottomButton">
+                                <button type="button" class="btn btn-dark" name="Reset" value = "Submit" id="submitFormData" onclick="resetGame();">Reset</button>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
