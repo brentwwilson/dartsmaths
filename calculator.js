@@ -13,7 +13,6 @@ function dartOneNumber() {
     document.getElementById("dartthree").value = dartthree;
     document.getElementById("multithree").value = multithree;
     document.getElementById("darttotal").value = "";
-    document.getElementById("total").value = "";
 }
 
 //Check Guess is Correct
@@ -25,10 +24,10 @@ function checkGuess() {
     var dartthree = document.getElementById("dartthree").value;
     var multithree = document.getElementById("multithree").value;    
     var darttotal = dartone*multione + darttwo*multitwo + dartthree*multithree;
-    var totalguess = document.getElementById("total").value
-    if (totalguess == darttotal) {
-        document.getElementById("darttotal").value = darttotal;
+    if (document.getElementById("scoretotal").value > 0 && document.getElementById("darttotal").value == "") {
+        document.getElementById("scoretotal").value = document.getElementById("scoretotal").value - darttotal
     }
+    document.getElementById("darttotal").value = darttotal
 }
 
 //Reset
@@ -40,7 +39,5 @@ function resetGame() {
     document.getElementById("dartthree").value = "";
     document.getElementById("multithree").value = "";
     document.getElementById("darttotal").value = "";
-    document.getElementById("scoretotal").value = "";
-    document.getElementById("total").value = "";
-    document.getElementById("score").value = "";
+    document.getElementById("scoretotal").value = "501";
 }
